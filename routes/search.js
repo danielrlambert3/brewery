@@ -17,19 +17,17 @@ request(apiUrl, function (error, response, body) {
         console.log('error:', error); // Print the error if one occurred
     } else {
         console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-        let brewery = body;
-        console.log(brewery);
+        let parsedData = JSON.parse(body);
+        console.log(typeof parsedData);
+        console.log(parsedData);
+        // let brewery = body;
+        // console.log(brewery);
+        res.render("./pages/results", {parsedData: parsedData});
+        
     }
     });
 
-    
-    /*if(req){
-        console.log('request');
-        console.log(req.body.name);
-    } else {
-        console.log('not working');
-    } */
-    res.redirect("/");
+    // res.redirect("/");
 });
 
 

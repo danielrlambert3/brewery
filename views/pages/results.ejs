@@ -1,0 +1,28 @@
+<%- include ../partials/header %>
+            <div class="container-fluid search">
+                <div class="row">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-6">
+                        <h1>Results Page</h1>
+                        <% parsedData.forEach(function(brewery) { %>
+                            <li><%= brewery.name %> - <%= brewery.city %>, <%= brewery.state %> (<a href="<%= brewery.website_url %>">Website</a>)</li>
+                        <% }) %>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                    </div>
+                </div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3">
+                        </div>
+                        <div class="col-6">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+<%- include ../partials/footer %>
