@@ -1,17 +1,22 @@
 <%- include ../partials/header %>
             <div class="container-fluid search">
-                <div class="row">
-                    <div class="col-3">
-                    </div>
-                    <div class="col-6">
-                        <h1>Results Page</h1>
+                    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
                         <% parsedData.forEach(function(brewery) { %>
-                            <li><%= brewery.name %> - <%= brewery.city %>, <%= brewery.state %> (<a href="<%= brewery.website_url %>">Website</a>)</li>
-                        <% }) %>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="thumbnail">
+                                <img src="http://www.therounduptx.com/wp-content/uploads/2018/09/person-silhouette-with-question-mark-vector-13296382.jpg">
+                                <div class="caption">
+                                    <h4><%= brewery.name %> - <%= brewery.city %>, <%= brewery.state %> (<a href="<%= brewery.website_url %>">Website</a>)</h4>
+                                </div>
+                                <p>
+                                    <a class ="btn btn-primary" href="">More Info</a>
+                                </p>
+                            </div>
+                        </div>
+                    <% }); %>
                     </div>
-                    <div class="col-3">
-                    </div>
-                    </div>
+
+
                 </div>
             <footer class="footer">
                 <div class="container">
