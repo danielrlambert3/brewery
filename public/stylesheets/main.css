@@ -13,7 +13,7 @@
 .search {
     min-height: 800px;
     height: 100%;
-    padding: 100px 0px;
+    padding: 100px 20px;
     background-color: #e9ecef;
 }
 
@@ -32,8 +32,4 @@
 
 .thumbnail .caption-full {
     padding: 9px;
-}
-
-.leftside {
-    text-align: left;
 }

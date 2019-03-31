@@ -5,7 +5,6 @@ var request = require('request');
 
 // Route
 router.post("/search", function(req, res){
-    console.log(req.body.state);
     let state = req.body.state;
     let apiUrl = 'https://api.openbrewerydb.org/breweries/search?query=' + state;
     console.log(apiUrl);
