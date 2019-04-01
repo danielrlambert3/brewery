@@ -14,9 +14,13 @@ app.use(indexRoutes);
 app.use(searchRoutes);
 
 
-var server = app.listen(3000, function (){
-    console.log("Calling app.listen's callback function.");
-    var host = server.address().address;
-    var port = server.address().port;
-    console.log('Example app listening at http://%s:%s', host, port);
-    });
+app.listen(process.env.PORT || 3000, function(){
+    console.log('Your node js server is running');
+});
+
+// var server = app.listen(3000, function (){
+//     console.log("Calling app.listen's callback function.");
+//     var host = server.address().address;
+//     var port = server.address().port;
+//     console.log('Example app listening at http://%s:%s', host, port);
+//     });
