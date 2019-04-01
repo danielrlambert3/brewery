@@ -4,7 +4,8 @@ var express = require("express"),
     request = require('request')
 
 var indexRoutes = require("./routes/index"),
-    searchRoutes = require("./routes/search")
+    searchRoutes = require("./routes/search"),
+    locationRoutes = require("./routes/location")
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -12,6 +13,8 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(indexRoutes);
 app.use(searchRoutes);
+app.use(locationRoutes);
+
 
 
 app.listen(process.env.PORT || 3000, function(){
