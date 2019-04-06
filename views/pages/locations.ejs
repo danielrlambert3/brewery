@@ -1,15 +1,30 @@
 <%- include ../partials/header %>
-            <div class="container-fluid search">
+                <div class="container-fluid thumbnail">
+                        <img class="" src="http://www.plushrepublic.com/wp-content/uploads/2019/04/beer-taps.png">
+                </div>
+                <div class="container-fluid search">
                     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
-                        <div class="col-md-8 col-sm-8">
+                        <div class="col-6">
                             <div class="thumbnail">
-                                <img src="https://img.grouponcdn.com/deal/crg8hnSc6RQdFUUfBGWq/uh-700x420/v1/c700x420.jpg">
                                 <div class="caption">
                                     <h4><%= locationData.name %> - <%= locationData.city %>, <%= locationData.state %> (<a href="<%= locationData.website_url %>">Website</a>)</h4>
                                 </div>
                                 <p>
                                     <a class ="btn btn-primary" href="">More Info</a>
                                 </p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div id="mapid">
+                                <script>
+                                var mymap = L.map('mapid').setView([30.26772, -97.7431], 13);
+                                L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGFuaWVscmxhbWJlcnQiLCJhIjoiY2p1NjQ5bWN2MWZmZjQzbG9rczBodTB1dCJ9.rmhmjtVXyLxfm4-QreGodg', {
+                                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                                maxZoom: 18,
+                                id: 'mapbox.streets',
+                                accessToken: 'pk.eyJ1IjoiZGFuaWVscmxhbWJlcnQiLCJhIjoiY2p1NjQ5bWN2MWZmZjQzbG9rczBodTB1dCJ9.rmhmjtVXyLxfm4-QreGodg'
+                                }).addTo(mymap);
+                                </script>
                             </div>
                         </div>
                     </div>
