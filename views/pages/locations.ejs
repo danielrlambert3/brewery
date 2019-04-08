@@ -7,8 +7,12 @@
                         <div class="col-6">
                             <div class="thumbnail">
                                 <div class="caption">
-                                    <h4><%= locationData.name %> - <%= locationData.city %>, <%= locationData.state %> (<a href="<%= locationData.website_url %>">Website</a>)</h4>
+                                    <h4><%= locationData.name %> - <%= locationData.city %>, <%= locationData.state %> <%= locationData.postal_code %> (<a href="<%= locationData.website_url %>">Website</a>)</h4>
                                 </div>
+                                <p>Phone: <%= locationData.phone %></p>
+                                <p>Type: <%= locationData.brewery_type %></p>
+                                <p>Longitude: <%= locationData.longitude %></p>
+                                <p>Latitude: <%= locationData.latitude %></p>
                                 <p>
                                     <a class ="btn btn-primary" href="">More Info</a>
                                 </p>
