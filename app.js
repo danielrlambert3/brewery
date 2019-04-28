@@ -1,11 +1,13 @@
 var express = require("express"),
     bodyParser = require("body-parser"),
     app = express(),
-    request = require('request')
+    request = require('request'),
+    mongoose = require('mongoose')
 
 var indexRoutes = require("./routes/index"),
     searchRoutes = require("./routes/search"),
-    locationRoutes = require("./routes/location")
+    locationRoutes = require("./routes/location"),
+    User = require("./models/user")
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -15,7 +17,7 @@ app.use(indexRoutes);
 app.use(searchRoutes);
 app.use(locationRoutes);
 
-
+mongoose.connect("mongodb://localhost/brewery");
 
 app.listen(process.env.PORT || 3000, function(){
     console.log('Your node js server is running');
