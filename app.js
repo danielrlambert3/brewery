@@ -19,6 +19,11 @@ app.use(locationRoutes);
 
 mongoose.connect("mongodb://localhost/brewery");
 
+User.create({
+    username: "danielrlambert+test@gmail.com",
+    password: "who knows"
+});
+
 app.listen(process.env.PORT || 3000, function(){
     console.log('Your node js server is running');
 });
