@@ -7,6 +7,7 @@ var express = require("express"),
 var indexRoutes = require("./routes/index"),
     searchRoutes = require("./routes/search"),
     locationRoutes = require("./routes/location"),
+    registerRoutes = require("./routes/register"),
     User = require("./models/user")
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,6 +17,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(indexRoutes);
 app.use(searchRoutes);
 app.use(locationRoutes);
+app.use(registerRoutes);
 
 mongoose.connect("mongodb://localhost/brewery");
 
