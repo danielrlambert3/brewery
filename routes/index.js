@@ -4,14 +4,8 @@ var router = express.Router();
 
 // Route
 router.get("/", function(req, res){
-    res.render("./pages/index");
-});
-
-// AUTH Routes
-
-// show login form
-router.get("/login", function(req, res){
-    res.render("./pages/login");
+    console.log(req.user);
+    res.render("./pages/index", {currentUser: req.user});
 });
 
 

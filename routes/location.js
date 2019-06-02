@@ -22,7 +22,7 @@ request(apiUrl, function (error, response, body) {
         console.log(locationData);
         // let brewery = body;
         // console.log(brewery);
-       res.render("./pages/locations", {locationData: locationData});
+       res.render("./pages/locations", {locationData: locationData,currentUser: req.user});
 
     }
     });

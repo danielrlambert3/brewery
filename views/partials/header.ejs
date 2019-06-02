@@ -22,7 +22,11 @@
                     <img src="http://pluspng.com/img-png/bootstrap-logo-png-logo-228.png" width="30" height="30" class="d-inline-block align-top" alt=""> Brewery Finder
                 </a>
                 <form class="form-inline">
+                    <% if(!currentUser) { %>
                     <a style="margin-right: 10px;" href="/login" class="button">Login</a>
-                    <a href="/register" class="button">Register</a>
+                    <a style="margin-right: 10px;" href="/register" class="button">Register</a>
+                    <% } else { %>
+                    <a href="/logout" class="button">Logout</a>
+                    <% } %>
                 </form>
             </nav>
