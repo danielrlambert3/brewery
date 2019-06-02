@@ -7,7 +7,7 @@ var session = require("express-session");
 
 //show login form
 router.get("/login", function(req, res){
-    res.render("./pages/login",{currentUser: req.user});
+    res.render("./pages/login");
 });
 
 // handle login logic

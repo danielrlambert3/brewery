@@ -7,7 +7,7 @@ var User = require("../models/user");
 
 // show register form
 router.get("/register", function(req, res){
-    res.render("./pages/register", {currentUser: req.user});
+    res.render("./pages/register");
 });
 
 // handle sign up logic
@@ -17,7 +17,7 @@ router.post("/register", function(req, res){
     User.register(newUser, req.body.password, function(err, user){
         if(err) {
             console.log(err);
-            return res.render("./pages/register", {currentUser: req.user});
+            return res.render("./pages/register");
         }
         passport.authenticate("local")(req,res, function() {
             res.redirect("/");

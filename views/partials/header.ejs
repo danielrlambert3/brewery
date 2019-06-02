@@ -26,6 +26,7 @@
                     <a style="margin-right: 10px;" href="/login" class="button">Login</a>
                     <a style="margin-right: 10px;" href="/register" class="button">Register</a>
                     <% } else { %>
+                    <a style="margin-right: 10px;" href="">Signed In As, <%= currentUser.username %> </a>
                     <a href="/logout" class="button">Logout</a>
                     <% } %>
                 </form>

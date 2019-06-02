@@ -21,7 +21,7 @@ request(apiUrl, function (error, response, body) {
         console.log(parsedData);
         // let brewery = body;
         // console.log(brewery);
-        res.render("./pages/results", {parsedData: parsedData, currentUser: req.user});
+        res.render("./pages/results", {parsedData: parsedData});
         
     }
     });
